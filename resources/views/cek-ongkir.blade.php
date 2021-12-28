@@ -25,7 +25,8 @@
                                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                                     <option value="">Pilih Kota</option>
                                     @foreach ($dataKota as $kota)
-                                    <option value="{{ $kota->id }}" {{ $kota->id == 501 ? 'selected' : ''}}>{{
+                                    <option value="{{ $kota->id }}" {{ old('origin')==$kota->id ? 'selected' :
+                                        ($kota->id == 501 ? 'selected' : '') }}>{{
                                         $kota->name . ', ' . $kota->province->name }}
                                     </option>
                                     @endforeach
@@ -45,7 +46,9 @@
                                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                                     <option value="">Pilih Kota</option>
                                     @foreach ($dataKota as $kota)
-                                    <option value="{{ $kota->id }}">{{ $kota->name . ', ' . $kota->province->name }}
+                                    <option value="{{ $kota->id }}" {{ old('destination')==$kota->id ? 'selected' : ''
+                                        }}>{{
+                                        $kota->name . ', ' . $kota->province->name }}
                                     </option>
                                     @endforeach
                                 </select>
@@ -60,7 +63,7 @@
                                 Berat Barang
                             </label>
                             <div class="mt-1 relative rounded-md shadow-sm">
-                                <input type="number" name="weight" autocomplete="weight"
+                                <input type="number" name="weight" autocomplete="weight" value="{{ old('weight') }}"
                                     class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
                                     placeholder="1000" aria-describedby="price-currency">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
@@ -83,7 +86,8 @@
                                     class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                                     <option value="">Pilih Kurir</option>
                                     @foreach ($dataKurir as $key => $value)
-                                    <option value="{{ $key }}">{{ $value }}</option>
+                                    <option value="{{ $key }}" {{ old('courier')==$key ? 'selected' : '' }}>{{ $value }}
+                                    </option>
                                     @endforeach
                                 </select>
                             </div>
