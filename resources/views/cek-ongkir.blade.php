@@ -31,6 +31,9 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @error('origin')
+                            <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-3">
@@ -47,6 +50,9 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @error('destination')
+                            <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-6">
@@ -63,6 +69,9 @@
                                     </span>
                                 </div>
                             </div>
+                            @error('weight')
+                            <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-6">
@@ -78,6 +87,9 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @error('courier')
+                            <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>

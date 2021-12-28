@@ -18,6 +18,9 @@
                             <label for="maksimal" class="block text-sm font-medium text-gray-700">Nilai Maksimal</label>
                             <input type="number" name="maksimal" autocomplete="maksimal"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            @error('maksimal')
+                            <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
