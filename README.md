@@ -11,9 +11,12 @@
 
  - Clone atau download project
  - Masuk directori project, jalankan `composer install`
- - Setup konfigurasi database pada .env
+ - Rename file .env.example menjadi .env
+ - Setup konfigurasi database pada file .env
  - Tambahkan `RAJAONGKIR_API_KEY=apikey` pada .env
- - jalankan `php artisan migrate --seed` pastikan koneksi internet stabil, perintah ini akan mengambil data dari [rajaongkir.com](rajaongkir.com)
+ - Jalankan `php artisan key:generate`
+ - Jalankan `php artisan optimize`
+ - Jalankan `php artisan migrate --seed` pastikan koneksi internet stabil, perintah ini akan mengambil data dari [rajaongkir.com](rajaongkir.com)
 
 ## License
 
